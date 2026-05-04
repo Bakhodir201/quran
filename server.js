@@ -3,6 +3,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
+// Fallback qiymatlar (Railway variable ishlamasa)
+process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://quron:quron123@cluster0.llcabkz.mongodb.net/quron100';
+process.env.JWT_SECRET = process.env.JWT_SECRET || 'quron100_secret_key_2024_xavfsiz';
+process.env.ADMIN_PHONE = process.env.ADMIN_PHONE || 'admin';
+process.env.ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
 const cors = require('cors');
 
 const app = express();
