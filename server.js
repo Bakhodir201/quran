@@ -129,4 +129,4 @@ app.delete('/api/admin/users/:id', auth, adminOnly, async (req, res) => {
 
 // ========== START ==========
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log('🚀 http://localhost:' + PORT));
+app.listen(PORT, '0.0.0.0', () => console.log('🚀 http://localhost:' + PORT));
